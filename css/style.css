@@ -1,7 +1,14 @@
+main {
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .box {
 	height: 800px;
 	width: 800px;
-	margin: 90px auto;
 	background-color: blueviolet;
 	border-radius: 1rem;
 }
@@ -25,7 +32,7 @@
 
 #result,
 #placed-numbers {
-	height: 50%;
+	height: 40%;
 	width: 100%;
 }
 
