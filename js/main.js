@@ -11,10 +11,9 @@ let number = [];
 let numberRight = [];
 let numberWrong = [];
 
-
 let i = 0;
 while (i < 5) {
-    const randomInt = (Math.floor(Math.random() * 10));
+    const randomInt = (Math.floor(Math.random() * 10 + 1));
     console.log(randomInt);
     number.push(randomInt);
     i++;
@@ -22,25 +21,26 @@ while (i < 5) {
 
 console.log(number);
 const timer = setInterval(function () {
-    console.warn('timer started');
+    for (let i = 0; i < 5; i++){
+        let numberUser = parseInt(prompt('inserisci numero'));
+        if (number.includes(numberUser)) {
+            console.log('molto bene');
+            numberUser;
+            numberRight.push(numberUser);
+        } else {
+            console.log('molto male');
+            numberUser;
+            numberWrong.push(numberUser);
+        }
+    }
+
+    console.log(`hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}`);
+    console.log(`hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}`);
+    console.warn('timer end');
 }, 30000);
 
+clearInterval(timer);
 
-let numberUser = parseInt(prompt('inserisci numero'));
-console.log(typeof (numberUser));
 
-for (let i = 0; i < 5; i++){
-    if (number.includes(numberUser)) {
-        console.log('molto bene');
-        numberUser = parseInt(prompt('inserisci numero'));
-        numberRight.push(numberUser);
 
-    } else {
-        console.log('molto male');
-        numberUser = parseInt(prompt('inserisci numero'));
-        numberWrong.push(numberUser);
-    }
-}
 
-console.log(`hai sbagliato ad inseire ${numberWrong.length}numeri, ovvero: ${numberWrong}`);
-console.log(`hai inserito correttamente ${numberWrong.length}numeri, ovvero: ${numberRight}`);
