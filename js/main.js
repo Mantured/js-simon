@@ -22,14 +22,16 @@ const timer = setInterval(function () {
     console.warn('timer started');
 }, 30000);
 
-let check = false;
 
 let numberUser = parseInt(prompt('inserisci numero'));
 console.log(typeof (numberUser));
 
-let x = 0;
-while ((x < 5) && (number.includes(numberUser))) {
-    check = true;
-    console.log('molto bene');
-    x++
+for (let i = 0; i < 5; i++){
+    if (number.includes(numberUser)) {
+        console.log('molto bene');
+        numberUser = parseInt(prompt('inserisci numero'));
+    } else {
+        console.log('molto male');
+        numberUser = parseInt(prompt('inserisci numero'));
+    }
 }
