@@ -18,7 +18,7 @@ while (i < 5) {
     const randomInt = (Math.floor(Math.random() * 10 + 1));
     console.log(randomInt);
     number.push(randomInt);
-    placedNumbers.innerHTML += `<span>${randomInt}</span>`
+    placedNumbers.innerHTML += `<div class="square">${randomInt}</div>`
     i++;
 }
 
@@ -38,8 +38,8 @@ setTimeout(() => {
             numberWrong.push(numberUser);
         }
     }
-    result.innerHTML = `hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}`;
-    result.innerHTML +=`hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}`;
+    result.innerHTML = `<h3>hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}</h3>`;
+    result.innerHTML += `<h3>hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}</h3>`;
     console.warn('timer end');
 }, 1000);
 

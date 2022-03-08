@@ -1,0 +1,43 @@
+.box {
+	height: 800px;
+	width: 800px;
+	margin: 90px auto;
+	background-color: blueviolet;
+	border-radius: 1rem;
+}
+
+.square {
+	width: calc(100% / 5);
+	height: calc(100% / 5);
+	background-color: whitesmoke;
+	border: 1px solid brown;
+	border-radius: 1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.box > h1 {
+	text-align: center;
+	text-transform: capitalize;
+	color: aqua;
+}
+
+#result,
+#placed-numbers {
+	height: 50%;
+	width: 100%;
+}
+
+#placed-numbers {
+	display: flex;
+	align-items: center;
+}
+
+#result {
+	background-color: chartreuse;
+	border: 1px solid;
+	border-radius: 1rem;
+	padding: 2rem;
+	text-align: center;
+}
