@@ -41,7 +41,7 @@ setTimeout(() => {
     result.innerHTML = `<h3>hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}</h3>`;
     result.innerHTML += `<h3>hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}</h3>`;
     console.warn('timer end');
-}, 1000);
+}, 30000);
 
 
 
