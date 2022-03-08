@@ -6,6 +6,8 @@ Dopo 30 secondi l'utente deve inserire, uno alla volta, i numeri che ha visto pr
 Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei numeri da indovinare sono stati individuati.
 
 */
+const placedNumbers = document.getElementById('placed-numbers');
+const result = document.getElementById('result');
 
 let number = [];
 let numberRight = [];
@@ -16,11 +18,14 @@ while (i < 5) {
     const randomInt = (Math.floor(Math.random() * 10 + 1));
     console.log(randomInt);
     number.push(randomInt);
+    placedNumbers.innerHTML += `<span>${randomInt}</span>`
     i++;
 }
 
 console.log(number);
-const timer = setInterval(function () {
+
+setTimeout(() => {
+    placedNumbers.innerHTML = "";
     for (let i = 0; i < 5; i++){
         let numberUser = parseInt(prompt('inserisci numero'));
         if (number.includes(numberUser)) {
@@ -33,13 +38,12 @@ const timer = setInterval(function () {
             numberWrong.push(numberUser);
         }
     }
-
-    console.log(`hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}`);
-    console.log(`hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}`);
+    result.innerHTML = `hai sbagliato ad inseire ${numberWrong.length} numeri, ovvero: ${numberWrong}`;
+    result.innerHTML +=`hai inserito correttamente ${numberRight.length} numeri, ovvero: ${numberRight}`;
     console.warn('timer end');
-}, 30000);
+}, 1000);
 
-clearInterval(timer);
+
 
 
 
