@@ -8,6 +8,9 @@ Dopo che sono stati inseriti i 5 numeri, il software dice quanti e quali dei num
 */
 
 let number = [];
+let numberRight = [];
+let numberWrong = [];
+
 
 let i = 0;
 while (i < 5) {
@@ -30,8 +33,14 @@ for (let i = 0; i < 5; i++){
     if (number.includes(numberUser)) {
         console.log('molto bene');
         numberUser = parseInt(prompt('inserisci numero'));
+        numberRight.push(numberUser);
+
     } else {
         console.log('molto male');
         numberUser = parseInt(prompt('inserisci numero'));
+        numberWrong.push(numberUser);
     }
 }
+
+console.log(`hai sbagliato ad inseire ${numberWrong.length}numeri, ovvero: ${numberWrong}`);
+console.log(`hai inserito correttamente ${numberWrong.length}numeri, ovvero: ${numberRight}`);
